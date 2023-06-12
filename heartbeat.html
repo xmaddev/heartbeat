@@ -1,0 +1,64 @@
+<html>
+<head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Pacifico&display=swap');
+body {
+	margin: 0;
+	padding: 0;
+	background:#222;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+ .heart_wrapper {
+  	display:flex;
+  	align-items: center;
+	justify-content: center;
+	gap:5px;
+  }
+ .heart_wrapper .text {
+  	font-family: 'Caveat', cursive;
+  	font-size: 22px;
+  	color:#fff;
+  	position: relative;
+  }
+.heart_wrapper .text:before {
+  	content:'';
+  	display:block;
+  	width:100%;
+  	height:1px;
+  	position:absolute;
+  	bottom:0;
+  	background: #fff;
+  	animation: text-underline 2s 1;
+  }
+.heart_wrapper .heart {
+ 	width:36px;
+ 	height:36px;
+ 	position: relative;
+ 	display: flex;
+ 	align-items: center;
+	justify-content: center;
+  }
+.heart_wrapper .heart:before{
+	content:"🧡";
+	position:absolute;
+	animation: heartbeat 1s infinite alternate;
+}
+@keyframes text-underline {
+	from {width:0%}
+	to {width:100%;}
+}
+@keyframes heartbeat {
+	0% {font-size:22px;}
+	100% {font-size:28px;}
+}
+</style>
+</head>
+<body>
+<div class="heart_wrapper">
+	<div class="text">Created by &lt;Sergey /&gt; with </div>
+	<span class="heart"></span>
+</div>
+</body>
+</html>
